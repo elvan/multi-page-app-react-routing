@@ -3,6 +3,7 @@ import './App.css';
 
 // page components
 import About from './pages/About';
+import Article from './pages/Article';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 
@@ -12,9 +13,6 @@ function App() {
       <BrowserRouter>
         <nav>
           <h1>My Articles</h1>
-          {/* <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link> */}
           <NavLink exact to='/'>
             Home
           </NavLink>
@@ -31,6 +29,9 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/articles/:id'>
+            <Article />
           </Route>
         </Switch>
       </BrowserRouter>
